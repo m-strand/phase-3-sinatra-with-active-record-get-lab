@@ -17,7 +17,7 @@ set :default_content_type, 'application/json'
       baked_goods.to_json
     end
 
-    get 'baked_goods/most_expensive' do
+    get '/baked_goods/most_expensive' do
       baked_goods = BakedGood.all.order('price DESC').limit(1)
       baked_goods.to_json
     end
